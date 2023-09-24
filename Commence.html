@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        .bd {
+            background: url(./back.jpg);
+            display: inline;
+            margin-top: 0px;
+            margin-left: 0px;
+            background-color: lightgray;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 25px;
+        }
+        
+        .items {
+            display: grid;
+            padding-top: 15px;
+            margin-left: 70px;
+        }
+        
+        @media(min-width: 500px) {
+            .items {
+                grid-template-columns: 1fr 1fr;
+            }
+            .sech,
+            .F2 {
+                width: 0px;
+            }
+        }
+        
+        @media(min-width: 550px) {
+            .sech,
+            .F2 {
+                width: 50px;
+            }
+        }
+        
+        @media(min-width: 600px) {
+            .items {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .sech,
+            .F2 {
+                width: 100px;
+            }
+        }
+        
+        @media(min-width: 650px) {
+            .sech,
+            .F2 {
+                width: 150px;
+            }
+        }
+        
+        @media(min-width: 700px) {
+            .sech,
+            .F2 {
+                width: 200px;
+            }
+        }
+        
+        @media(min-width: 750px) {
+            .sech,
+            .F2 {
+                width: 250px;
+            }
+        }
+        
+        @media(min-width: 800px) {
+            .sech,
+            .F2 {
+                width: 300px;
+            }
+        }
+        
+        @media(min-width: 850px) {
+            .sech,
+            .F2 {
+                width: 350px;
+            }
+        }
+        
+        @media(min-width: 900px) {
+            .items {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            .sech,
+            .F2 {
+                width: 400px;
+            }
+        }
+        
+        @media(min-width: 950px) {
+            .sech,
+            .F2 {
+                width: 450px;
+            }
+        }
+        
+        @media(min-width: 1000px) {
+            .sech,
+            .F2 {
+                width: 500px;
+            }
+        }
+        
+        @media(min-width: 1050px) {
+            .sech,
+            .F2 {
+                width: 550px;
+            }
+        }
+        
+        @media(min-width: 1100px) {
+            .sech,
+            .F2 {
+                width: 600px;
+            }
+        }
+        
+        @media(min-width: 1150px) {
+            .sech,
+            .F2 {
+                width: 650px;
+            }
+        }
+        
+        @media(min-width: 1200px) {
+            .items {
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            }
+            .sech,
+            .F2 {
+                width: 700px;
+            }
+        }
+        
+        @media(min-width: 1250px) {
+            .sech,
+            .F2 {
+                width: 750px;
+            }
+        }
+        
+        @media(min-width: 1300px) {
+            .sech,
+            .F2 {
+                width: 800px;
+            }
+        }
+        
+        .a {
+            background-color: lightgray;
+            padding-left: 5px;
+            margin-top: 50px;
+            box-shadow: 7px 0px 10px 0px;
+            border-radius: 10px;
+        }
+        
+        .im {
+            display: block;
+            color: white;
+            width: 250px;
+            height: 200px;
+            border-radius: 2px;
+        }
+        
+        .Extra {
+            flex: 1;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            background-color: rgb(255, 255, 255);
+            padding-top: 0px;
+            z-index: 10;
+        }
+        
+        .Extra2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            background-color: white;
+            margin-top: 50px;
+            width: 60px;
+        }
+        
+        .F1 {
+            width: 200px;
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .F2 {
+            display: flex;
+            flex-direction: row;
+            height: 80px;
+            padding-left: 30px;
+        }
+        
+        .F3 {
+            flex-grow: 3;
+            display: flex;
+            height: 80px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        
+        .li {
+            width: 30px;
+            height: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .lines {
+            display: inline-block;
+            margin-left: 10px;
+            height: 45px;
+            width: 50px;
+            border-radius: 0px;
+            padding-top: 3px;
+        }
+        
+        .user {
+            display: inline-block;
+            padding-top: 10px;
+            margin-left: 50px;
+            height: 30px;
+            width: 60px;
+            opacity: 0.6;
+        }
+        
+        .sech {
+            flex-shrink: 2;
+            margin-top: 5px;
+            height: 34px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-right: 0px;
+            opacity: 0.7;
+            box-shadow: 0px 0px 2px 0px;
+            font-size: 16px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        .butt {
+            background-color: rgb(196, 190, 190);
+            margin-top: 5px;
+            padding-top: 5px;
+            height: 40px;
+            width: 50px;
+            border-left: 0px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-style: solid;
+            border-left: 0px;
+            opacity: 0.5;
+            margin-left: 0px;
+        }
+        
+        .butt:active {
+            opacity: 0.7;
+        }
+        
+        .sec {
+            padding-left: 10px;
+            padding-right: 20px;
+            padding-top: 0px;
+            height: 15px;
+            width: 15px;
+        }
+        
+        .mat {
+            flex-shrink: 0;
+        }
+        
+        .y1,
+        .y2,
+        .y3,
+        .y4 {
+            height: 50px;
+            width: 30px;
+            margin-left: 10px;
+            padding-top: 10px;
+            border-style: hidden;
+            background-color: aliceblue;
+        }
+        
+        .y:hover {
+            opacity: 0.5;
+        }
+        
+        .x:hover {
+            opacity: 0.5;
+        }
+        
+        .y:active {
+            opacity: 0.2;
+        }
+        
+        .x:active {
+            opacity: 0.2;
+        }
+        
+        .im:hover {
+            opacity: 0.8;
+            cursor: grab;
+        }
+        
+        .sec:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        
+        .sec:active {
+            opacity: 0.2;
+        }
+        
+        .down {
+            height: 50px;
+            width: 250px;
+            color: white;
+            background-color: rgb(4, 158, 4);
+            border: hidden;
+            border-radius: 5px;
+        }
+        
+        .down:hover {
+            opacity: 0.7;
+        }
+        
+        .down:active {
+            opacity: 0.3;
+        }
+        
+        .y {
+            width: 25px;
+            height: 25px;
+            padding-right: 5px;
+        }
+        
+        .x1 {
+            width: 50px;
+            height: 120px;
+            background-color: aliceblue;
+            border-style: hidden;
+            margin-left: 0px;
+        }
+        
+        .x {
+            width: 25px;
+            height: 25px;
+        }
+        
+        .im {
+            border-color: black;
+            border-style: solid;
+        }
+        
+        .y {
+            position: relative;
+        }
+        
+        .cat,
+        .cata {
+            background-color: rgb(190, 6, 6);
+            margin-left: 15px;
+            color: rgb(185, 188, 190);
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            z-index: 100;
+            border-radius: 5px;
+        }
+        
+        .cati {
+            background-color: rgb(190, 6, 6);
+            margin-left: 15px;
+            color: rgb(185, 188, 190);
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            z-index: 100;
+            border-radius: 20px;
+        }
+    </style>
+
+</head>
+
+<body class="bd">
+    <div class="Extra">
+        <div class="F1">
+            <div class="li">
+                <image src="3lines.svg" class="lines">
+                    <image src="icons/album-circle-user.png" class="user">
+            </div>
+        </div>
+        <div class="F2">
+            <input class="sech" placeholder="SEARCH"></input>
+            <button class="butt">
+            <image src="icons/search.png" class="sec">
+            </button>
+        </div>
+        <div class="F3">
+            <div class="mat">
+                <button class="y1">
+                    <div class="cati"></div>
+                <image src="icons/bulb (1).png" class="y">
+                </button>
+                <button class="y2">
+                    <div class="cata">0</div>
+                      <image src="icons/envelope.png" class="y">
+                      </button>
+                <button class="y3">
+                    <div class="cat">0</div>
+                        <image src="icons/shopping-cart.png" class="y">
+                            
+                          </button>
+                <button class="y4">
+                    <div class="cati"></div>
+                            <image src="icons/user.png" class="y">
+                              </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="Extra2">
+        <button class="x1">
+                  <image src="icons/home.png" class="x">
+                </button>
+        <button class="x1">
+                  <image src="icons/pencil.png" class="x">
+                </button>
+        <button class="x1">
+                  <image src="icons/phone-call.png" class="x">
+                </button>
+        <button class="x1">
+                  <image src="icons/heart.png" class="x">
+                </button>
+        <button class="x1">
+                  <image src="icons/settings-sliders.png" class="x">
+                </button>
+    </div>
+
+    <div class="items">
+        <div class="a">
+            <image src="laptoop (1).jpg" class="im">
+                <div class="im1">Dell 1089PX <br> 7th Gen <br> 16GB RAM <br> I7.#4.78</div>
+                <button class="down" onclick="
+                 let cou=0;
+                 let full=0;
+                 cou=document.querySelector('.cat').innerHTML-0;
+                 full=cou+1;
+                 document.querySelector('.cat').innerHTML = full;
+
+                ">PURCHASE NOW</button>
+        </div>
+        <div class="a">
+            <image src="laptoop (2).jpg" class="im">
+                <div class="im1">APPLE J0T9PX <br> 5th Gen <br> 8GB RAM <br> I7.#4.78</div>
+                <button class="down" onclick="
+                 let cou=0;
+                 let full=0;
+                 cou=document.querySelector('.cat').innerHTML-0;
+                 full=cou+1;
+                 document.querySelector('.cat').innerHTML = full;
+
+                ">PURCHASE NOW</button>
+        </div>
+        <div class="a">
+            <image src="laptoop (3).jpg" class="im">
+                <div class="im1">LENOVO THINKPAD <br> 7th Gen <br> 16GB RAM <br> ET.#4.7*8</div>
+                <button class="down" onclick="
+                 let cou=0;
+                 let full=0;
+                 cou=document.querySelector('.cat').innerHTML-0;
+                 full=cou+1;
+                 document.querySelector('.cat').innerHTML = full;
+
+                ">PURCHASE NOW</button>
+        </div>
+        <div class="a">
+            <image src="laptoop (4).jpg" class="im">
+                <div class="im1">HP 1F8U7X <br> 7th Gen <br> 16GB RAM <br> I7.#4.78</div>
+                <button class="down" onclick="
+                 let cou=0;
+                 let full=0;
+                 cou=document.querySelector('.cat').innerHTML-0;
+                 full=cou+1;
+                 document.querySelector('.cat').innerHTML = full;
+
+                ">PURCHASE NOW</button>
+        </div>
+        <div class="a">
+            <image src="laptoop (5).jpg" class="im">
+                <div class="im1">ASUS T79#FG <br> 7th Gen <br> 32GB RAM <br> I7.#4.78</div>
+                <button class="down" onclick="
+                 let cou=0;
+                 let full=0;
+                 cou=document.querySelector('.cat').innerHTML-0;
+                 full=cou+1;
+                 document.querySelector('.cat').innerHTML = full;
+
+                ">PURCHASE NOW</button>
+        </div>
+        <div class="a">
+            <image src="laptoop (6).jpg" class="im">
+                <div class="im1">HP 1G89PX <br> 7th Gen <br> 16GB RAM <br> I7.#4.78</div>
+                <button class="down" onclick="
+                 let cou=0;
+                 let full=0;
+                 cou=document.querySelector('.cat').innerHTML-0;
+                 full=cou+1;
+                 document.querySelector('.cat').innerHTML = full;
+
+                ">PURCHASE NOW</button>
+        </div>
+    </div>
+</body>
+
+</html>
